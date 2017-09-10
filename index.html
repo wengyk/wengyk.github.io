@@ -811,10 +811,8 @@
       
         
           
-            <ul>
-<li>查看和转化文档编码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">file -i input.file # 查看文档编码</div><div class="line">iconv -l # 列出已有编码字符集</div><div class="line">iconv -f ISO-8859-1 -t UTF-8//TRANSLIT input.file -o out.file # 转化编码</div></pre></td></tr></table></figure>
+            <h2 id="查看和转化文档编码"><a href="#查看和转化文档编码" class="headerlink" title="查看和转化文档编码"></a>查看和转化文档编码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">file -i input.file # 查看文档编码</div><div class="line">iconv -l # 列出已有编码字符集</div><div class="line">iconv -f ISO-8859-1 -t UTF-8//TRANSLIT input.file -o out.file # 转化编码</div></pre></td></tr></table></figure>
+<h2 id="设置xdg-open打开磁力链接的默认软件"><a href="#设置xdg-open打开磁力链接的默认软件" class="headerlink" title="设置xdg-open打开磁力链接的默认软件"></a>设置xdg-open打开磁力链接的默认软件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 找到哪一个软件可以打开magnet链接</div><div class="line">grep &apos;magnet&apos; /usr/share/applications/*</div><div class="line"></div><div class="line"># qbittorrent.desktop文件中包含：”MimeType=application/x-bittorrent;x-scheme-handler/magnet;“，所以设qbittorrent为magnet链接的默认打开软件。</div><div class="line">xdg-mime default qbittorrent.desktop x-scheme-handler/magnet</div></pre></td></tr></table></figure>
 
           
         
